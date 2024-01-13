@@ -1,6 +1,22 @@
 # Setup Git
 
-Scripts for setting up git aliases & ssh-key on Linux or Unix-like system
+Scripts for setting up git configuration, credentials & ssh-key on Linux or Unix-like (eg. MacOS) systems.
+
+## Run Full Setup
+
+Setup your config, credentials & ssh key in one go.
+
+```cmd
+
+chmod +x ./git-config-setup.sh 
+chmod +x ./git-credentials-setup.sh
+chmod +x ./git-ssh-setup.sh
+
+./git-config-setup.sh
+./git-credentials-setup.sh
+./git-ssh-setup.sh
+
+```
 
 ## Run Config Setup
 
@@ -13,13 +29,24 @@ chmod +x ./git-config-setup.sh
 
 ```
 
-## Run Config Setup
+## Run Credentials Setup
+
+This will setup your name & email globally for git
+
+```cmd
+
+chmod +x ./git-credentials-setup.sh
+./git-credentials-setup.sh
+
+```
+
+## Run SSH key Setup
 
 This will setup your `ssh-key`
 
 ```cmd
 
-chmod +x ./git-key-setup.sh
-./git-key-setup.sh
+chmod +x ./git-ssh-setup.sh
+./git-ssh-setup.sh
 
 ```

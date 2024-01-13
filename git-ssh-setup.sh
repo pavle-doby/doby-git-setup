@@ -5,13 +5,15 @@ fancy_echo() {
   printf "\n$fmt\n" "$@"
 }
 
-fancy_echo "Git Setup..."
+fancy_echo "Git SSH-KEY Setup..."
 
-read -p "Enter your Frist and Last name for Git: " name
 read -p "Enter your email to generate ssh key: " email
 
-git config --global user.name "$name"
-git config --global user.email "$email"
+read -p "Set as global email? [y/n]: " as_global
+
+if [[ "$as_global" == 'y' || "$as_global" == 'Y' ]]; then
+  git config --global user.email "$email"
+fi
 
 fancy_echo "Generating SSH key"
 ssh-keygen -t ed25519 -q -N "" -C "$email"
@@ -22,3 +24,5 @@ cat ~/.ssh/id_ed25519.pub
 
 fancy_echo "Key coppied (I hope), paste it in GitHub"
 pbcopy < ~/.ssh/id_ed25519.pub
+
+fancy_echo "Git SSH-KEY Setup - Done"

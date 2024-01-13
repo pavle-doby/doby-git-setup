@@ -5,7 +5,10 @@ fancy_echo() {
   printf "\n$fmt\n" "$@"
 }
 
-fancy_echo "Git Setup..."
+fancy_echo "Git Config Setup..."
+
 sudo cp ./.gitignore ~/.gitignore
 sudo cp ./.gitconfig ~/.gitconfig
 git config --global core.excludesfile ~/.gitignore
+
+fancy_echo "Git Config Setup - Done"
