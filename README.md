@@ -2,6 +2,12 @@
 
 Scripts for setting up git `configuration`, `credentials` & `ssh-key` on Linux or Unix-like (eg. MacOS) systems.
 
+## Prerequisites
+
+1. Make sure you have `git` installed on your system.
+2. Clone this repository => `git clone https://github.com/pavle-doby/doby-git-setup.git`
+3. Go to the cloned directory => `cd doby-git-setup`
+
 ## Run Full Setup
 
 Setup your config, credentials & ssh key in one go.

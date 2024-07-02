@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Run this script
+## chmod +x git-ssh-setup.sh
+## git-ssh-setup.sh
+
 fancy_echo() {
   local fmt="$1"; shift
   printf "\n$fmt\n" "$@"
