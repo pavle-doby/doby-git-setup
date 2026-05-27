@@ -1,8 +1,17 @@
 #!/usr/bin/env bash
 
+##########################################################
 # Run this script
-## chmod +x git-ssh-setup.sh
-## git-ssh-setup.sh
+##########################################################
+## chmod +x ./git-ssh-setup.sh
+## ./git-ssh-setup.sh
+##########################################################
+# Description
+##########################################################
+## Generates an ED25519 SSH key for GitHub, 
+## configures the SSH agent, and copies 
+## the public key to the clipboard.
+##########################################################
 
 fancy_echo() {
   local fmt="$1"; shift
@@ -26,7 +35,7 @@ cp ./config ~/.ssh/config
 ssh-add -K ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 
-fancy_echo "Key coppied (I hope), paste it in GitHub"
+fancy_echo "Key copied (I hope), paste it in GitHub"
 pbcopy < ~/.ssh/id_ed25519.pub
 
 fancy_echo "Git SSH-KEY Setup - Done"

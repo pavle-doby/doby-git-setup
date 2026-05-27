@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
+##########################################################
 # Run this script
-## chmod +x git-credentials-setup.sh
-## git-credentials-setup.sh
+##########################################################
+## chmod +x ./git-credentials-setup.sh
+## ./git-credentials-setup.sh
+##########################################################
+# Description
+##########################################################
+## Prompts for your name and email and 
+## sets them as global Git credentials.
+##########################################################
 
 fancy_echo() {
   local fmt="$1"; shift

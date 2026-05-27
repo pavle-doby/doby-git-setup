@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
+##########################################################
 # Run this script
+##########################################################
 ## chmod +x ./git-g-setup.sh
 ## ./git-g-setup.sh
+##########################################################
+# Description
+##########################################################
+## Installs .bash_aliases and sources it in your shell
+## config so you can use `g` as a shortcut for `git`.
+##########################################################
 
 fancy_echo() {
   local fmt="$1"; shift
